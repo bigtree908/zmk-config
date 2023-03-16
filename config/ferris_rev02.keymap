@@ -8,10 +8,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define NAV_L 1
-#define OTHER_L 2
-#define NUM_L 3
-#define SYM_L 4
+#define 1_L 1
+#define 2_L 2
+#define 3_L 3
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -52,18 +51,18 @@
 
         2_layer {
             bindings = <
-                &trans     &trans     	&kp PG_UP	&trans          &trans       	&trans          &trans         	&trans      	&trans     		&trans
-                &trans     &kp HOME		&kp PG_DN	&kp END         &trans          &trans       	&trans          &trans         	&trans      	&trans     
-                &trans     &trans     	&trans      &trans          &trans       	&trans          &trans      	&trans     		&trans			&trans
-													&trans          &trans       	&trans          &trans
+                &trans     &trans     	&kp PG_UP	&trans          &trans       	&tog 1_L        &kp F1			&kp F2	        &kp F3         	&kp F4 
+                &trans     &kp HOME		&kp PG_DN	&kp END         &trans          &tog 2_L       	&kp F5			&kp F6       	&kp F7       	&kp F8     
+                &trans     &trans     	&trans      &trans          &trans       	&tog 3_L        &kp F9			&kp F10	        &kp F11   		&kp F12
+													&trans          &trans       	&tog 4_L      	&trans
             >;
         };
 
         3_layer {
             bindings = <
-                &trans    	&trans    	&trans      &trans         	&trans      	&trans     		&kp F1			&kp F2	        &kp F3         	&kp F4   
-                &trans    	&trans   	&trans      &trans         	&trans      	&trans     		&kp F5			&kp F6       	&kp F7       	&kp F8       
-                &trans      &trans	    &trans      &trans         	&trans      	&trans     		&kp F9			&kp F10	        &kp F11   		&kp F12
+                &trans    	&trans    	&trans      &trans         	&trans      	&trans     		&trans         	&trans      	&trans     		&trans  
+                &trans    	&trans   	&trans      &trans         	&trans      	&trans     		&trans          &trans         	&trans      	&trans       
+                &trans      &trans	    &trans      &trans         	&trans      	&trans     		&trans      	&trans     		&trans			&trans
 													&trans         	&trans     		&trans          &trans
             >;
         };
