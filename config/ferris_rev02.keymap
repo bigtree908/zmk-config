@@ -46,7 +46,7 @@
                 &kp Q      	&kp W      	&kp E     	&kp R          	&kp T			&kp Y			&kp U			&kp I			&kp O			&kp P
                 &hm LSHFT A &kp S 	  	&kp D 	  	&kp F			&kp G         	&kp H           &kp J    	   	&kp K			&kp L  	  		&hm RSHFT SEMI
                 &hm LCTRL Z &hm LALT X  &kp C     	&kp V          	&kp B         	&kp N           &kp M          	&kp COMMA   	&hm RALT DOT    &hm RCTRL FSLH
-													&kp TAB  		&kp ENTER     	&lt 1_L SPACE 	&bd 
+													&kp TAB  		&kp ENTER     	&lt 1_L SPACE 	&bd BKSP
 												  
             >;
         };
