@@ -27,13 +27,13 @@
             bindings = <&kp>, <&kp>;
         };
     
-        bd: bs_delete {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BS_DELETE";
-            #binding-cells = <0>;
-            bindings = <&kp BKSP>, <&kp DEL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
+        //bd: bs_delete {
+        //    compatible = "zmk,behavior-mod-morph";
+        //    label = "BS_DELETE";
+        //    #binding-cells = <0>;
+        //    bindings = <&kp BKSP>, <&kp DEL>;
+        //    mods = <(MOD_LSFT|MOD_RSFT)>;
+        //};
     };
 
     keymap {
