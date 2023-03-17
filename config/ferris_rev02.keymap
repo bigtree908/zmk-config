@@ -34,6 +34,14 @@
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>; 
         };
+		
+		spe: space_enter {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_ENTER";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp ENTER>;
+            mods = <(MOD_LSFT|MOD_RSFT)>; 
+        };
     };
 
     keymap {
@@ -44,12 +52,12 @@
                 &kp Q      	&kp W      	&kp E     	&kp R          	&kp T			&kp Y			&kp U			&kp I			&kp O			&kp P
                 &hm LSHFT A &kp S 	  	&kp D 	  	&kp F			&kp G         	&kp H           &kp J    	   	&kp K			&kp L  	  		&hm RSHFT SEMI
                 &hm LCTRL Z &hm LALT X  &kp C     	&kp V          	&kp B         	&kp N           &kp M          	&kp COMMA   	&hm RALT DOT    &hm RCTRL FSLH
-													&kp TAB  		&kp ENTER     	&lt L1_L SPACE 	&bsd
+													&kp TAB  		&kp ENTER     	&lt L1_L &spe 	&bsd
 												  
             >;
         };
 
-        Lay1_layer {
+        L1_layer {
             bindings = <
                 &kp ESC     &kp GRAVE   &kp UARW    &kp LBKT      	&kp RBKT        &trans       	&kp N7     		&kp N8      	&kp N9   		&kp MINUS     
                 &trans     	&kp LARW    &kp DARW    &kp RARW   		&kp APOS      	&trans          &kp N4     		&kp N5      	&kp N6   		&kp EQUAL        
@@ -58,7 +66,7 @@
             >;
         };
 
-        Lay2_layer {
+        L2_layer {
             bindings = <
                 &trans     &trans     	&kp PG_UP	&trans          &trans       	&tog L1_L     	&kp F1			&kp F2	        &kp F3         	&kp F4 
                 &trans     &kp HOME		&kp PG_DN	&kp END         &trans          &tog L2_L     	&kp F5			&kp F6       	&kp F7       	&kp F8     
@@ -67,7 +75,7 @@
             >;
         };
 
-        Lay3_layer {
+        L3_layer {
             bindings = <
                 &trans    	&trans    	&trans      &kp R         	&trans      	&trans     		&trans         	&trans      	&trans     		&trans  
                 &trans    	&trans   	&trans      &trans         	&trans      	&trans     		&trans          &trans         	&trans      	&trans       
