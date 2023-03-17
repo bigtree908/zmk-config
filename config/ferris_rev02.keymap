@@ -9,9 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 //#define DEFAULT 0
-#define Lay1_L 1
-#define Lay2_L 2
-#define Lay3_L 3
+#define L1_L 1
+#define L2_L 2
+#define L3_L 3
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -45,11 +45,27 @@
             bindings = <
                 &kp ESC     &kp GRAVE   &kp UARW    &kp LBKT      	&kp RBKT        &trans       	&kp N7     		&kp N8      	&kp N9   		&kp MINUS     
                 &trans     	&kp LARW    &kp DARW    &kp RARW   		&kp APOS      	&trans          &kp N4     		&kp N5      	&kp N6   		&kp EQUAL        
-                &trans     	&lt Lay2_L 	&lt Lay3_L 	&kp LGUI        &kp BSLH       	&kp N0         	&kp N1     		&kp N2      	&kp N3  		&kp DOT
+                &trans     	&lt L2_L A	&lt L3_L B	&kp LGUI        &kp BSLH       	&kp N0         	&kp N1     		&kp N2      	&kp N3  		&kp DOT
 													&trans          &trans       	&trans         	&trans
             >;
         };
 
+        Lay2_layer {
+            bindings = <
+                &trans     &trans     	&kp PG_UP	&trans          &trans       	&tog L1_L     &kp F1			&kp F2	        &kp F3         	&kp F4 
+                &trans     &kp HOME		&kp PG_DN	&kp END         &trans          &tog L2_L     &kp F5			&kp F6       	&kp F7       	&kp F8     
+                &trans     &trans     	&trans      &trans          &trans       	&tog L3_L    	&kp F9			&kp F10	        &kp F11   		&kp F12
+													&trans          &trans       	&trans      	&trans
+            >;
+        };
 
+        Lay3_layer {
+            bindings = <
+                &trans    	&trans    	&trans      &kp R         	&trans      	&trans     		&trans         	&trans      	&trans     		&trans  
+                &trans    	&trans   	&trans      &trans         	&trans      	&trans     		&trans          &trans         	&trans      	&trans       
+                &trans      &trans	    &trans      &trans         	&trans      	&trans     		&trans      	&trans     		&trans			&trans
+													&trans         	&trans     		&trans          &trans
+            >;
+        };
     };
 };
