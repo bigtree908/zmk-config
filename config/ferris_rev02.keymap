@@ -9,9 +9,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 //#define DEFAULT 0
-#define Lay1 1
-#define Lay2 2
-#define Lay3 3
+#define Lay1_L 1
+#define Lay2_L 2
+#define Lay3_L 3
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -36,7 +36,7 @@
                 &kp Q      	&kp W      	&kp E     	&kp R          	&kp T			&kp Y			&kp U			&kp I			&kp O			&kp P
                 &hm LSHFT A &kp S 	  	&kp D 	  	&kp F			&kp G         	&kp H           &kp J    	   	&kp K			&kp L  	  		&hm RSHFT SEMI
                 &hm LCTRL Z &hm LALT X  &kp C     	&kp V          	&kp B         	&kp N           &kp M          	&kp COMMA   	&hm RALT DOT    &hm RCTRL FSLH
-													&kp TAB  		&kp ENTER     	&lt Lay1 SPACE 	&trans
+													&kp TAB  		&kp ENTER     	&lt Lay1_L SPACE 	&trans
 												  
             >;
         };
@@ -45,16 +45,16 @@
             bindings = <
                 &kp ESC     &kp GRAVE   &kp UARW    &kp LBKT      	&kp RBKT        &trans       	&kp N7     		&kp N8      	&kp N9   		&kp MINUS     
                 &trans     	&kp LARW    &kp DARW    &kp RARW   		&kp APOS      	&trans          &kp N4     		&kp N5      	&kp N6   		&kp EQUAL        
-                &trans     	&lt Lay2 	&lt Lay3 	&kp LGUI        &kp BSLH       	&kp N0         	&kp N1     		&kp N2      	&kp N3  		&kp DOT
+                &trans     	&lt Lay2_L 	&lt Lay3_L 	&kp LGUI        &kp BSLH       	&kp N0         	&kp N1     		&kp N2      	&kp N3  		&kp DOT
 													&trans          &trans       	&trans         	&trans
             >;
         };
 
         Lay2_layer {
             bindings = <
-                &trans     &trans     	&kp PG_UP	&trans          &trans       	&tog Lay1       &kp F1			&kp F2	        &kp F3         	&kp F4 
-                &trans     &kp HOME		&kp PG_DN	&kp END         &trans          &tog Lay2      	&kp F5			&kp F6       	&kp F7       	&kp F8     
-                &trans     &trans     	&trans      &trans          &trans       	&tog Lay3      	&kp F9			&kp F10	        &kp F11   		&kp F12
+                &trans     &trans     	&kp PG_UP	&trans          &trans       	&tog Lay1_L       &kp F1			&kp F2	        &kp F3         	&kp F4 
+                &trans     &kp HOME		&kp PG_DN	&kp END         &trans          &tog Lay2_L      	&kp F5			&kp F6       	&kp F7       	&kp F8     
+                &trans     &trans     	&trans      &trans          &trans       	&tog Lay3_L      	&kp F9			&kp F10	        &kp F11   		&kp F12
 													&trans          &trans       	&trans      	&trans
             >;
         };
