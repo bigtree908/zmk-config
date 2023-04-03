@@ -40,7 +40,7 @@
             label = "SPACE_ENTER";
             #binding-cells = <0>;
             bindings = <&kp SPACE>, <&kp ENTER>;
-            mods = <(MOD_LSFT|MOD_RSFT)>; 
+            mods = <(MOD_RSFT)>; 
         };
 		
         ltb: layer_tab_behave {
