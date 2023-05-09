@@ -1,0 +1,97 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+//#define DEFAULT 0
+#define L1_L 1
+#define L2_L 2
+#define L3_L 3
+
+// Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
+&lt { quick_tap_ms = <200>; };
+
+/ {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "homerow mods";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+		
+		bsd: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            label = "BACKSPACE_DELETE";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>; 
+        };
+		
+		spen: space_enter {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_ENTER";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&kp ENTER>;
+            mods = <(MOD_RSFT)>; 
+        };
+		
+        ltb: layer_tab_behave {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_BEHAVE";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&mo>, <&spen>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+            bindings = <
+                &kp Q      	&kp W      	&kp E     	&kp R          	&kp T			&kp Y			&kp U			&kp I			&kp O			&kp P
+                &hm LSHFT A &kp S 	  	&kp D 	  	&kp F			&kp G         	&kp H           &kp J    	   	&kp K			&kp L  	  		&hm RSHFT SEMI
+                &hm LCTRL Z &hm LALT X  &kp C     	&kp V          	&kp B         	&kp N           &kp M          	&kp COMMA   	&hm RALT DOT    &hm RCTRL FSLH
+													&kp TAB  		&kp ENTER     	&ltb L1_L SPACE &bsd
+												  
+            >;
+        };
+
+        L1_layer {
+            bindings = <
+                &kp ESC     &kp GRAVE   &kp UARW    &kp LBKT      	&kp RBKT        &kp STAR       	&kp N7     		&kp N8      	&kp N9   		&kp MINUS     
+                &trans     	&kp LARW    &kp DARW    &kp RARW   		&kp APOS      	&kp FSLH        &kp N4     		&kp N5      	&kp N6   		&kp EQUAL        
+                &trans     	&lt L2_L A	&lt L3_L B	&kp LGUI        &kp BSLH       	&kp N0         	&kp N1     		&kp N2      	&kp N3  		&kp DOT
+													&trans          &trans       	&trans         	&trans
+            >;
+        };
+
+        L2_layer {
+            bindings = <
+                &trans     &trans     	&kp PG_UP	&trans          &trans       	&tog L1_L     	&kp F1			&kp F2	        &kp F3         	&kp F4 
+                &trans     &kp HOME		&kp PG_DN	&kp END         &trans          &tog L2_L     	&kp F5			&kp F6       	&kp F7       	&kp F8     
+                &trans     &trans     	&trans      &trans          &trans       	&tog L3_L    	&kp F9			&kp F10	        &kp F11   		&kp F12
+													&trans          &trans       	&trans      	&trans
+            >;
+        };
+
+        L3_layer {
+            bindings = <
+                &trans    	&trans    	&trans      &trans         	&trans      	&trans     		&trans         	&trans      	&trans     		&trans  
+                &trans    	&trans   	&trans      &trans         	&trans      	&trans     		&trans          &trans         	&trans      	&trans       
+                &trans      &trans	    &trans      &trans         	&trans      	&trans     		&trans      	&trans     		&trans			&trans
+													&trans         	&trans     		&trans          &trans
+            >;
+        };
+    };
+};
