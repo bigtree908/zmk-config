@@ -3,16 +3,23 @@
 
 if BOARD_PUFFIN
 
-config ZMK_KEYBOARD_NAME
-    default "Puffin"
+config BOARD
+    default "puffin"
 
-config ZMK_USB
+if USB_DEVICE_STACK
+
+config USB_NRFX
     default y
-	
+
+endif # USB_DEVICE_STACK
+
+config BT_CTLR
+    default BT
+
 config ZMK_BLE
     default y
 
-config ZMK_KSCAN_MATRIX_POLLING
+config ZMK_USB
     default y
 
 endif # BOARD_PUFFIN
