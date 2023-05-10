@@ -3,7 +3,7 @@
 
 if BOARD_PUFFIN
 
-config ZMK_KEYBOARD_NAME
+config PUFFIN
     default "Puffin"
 
 config ZMK_USB
