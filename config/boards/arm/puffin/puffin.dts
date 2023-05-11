@@ -8,8 +8,8 @@
 #include <nordic/nrf52840_qiaa.dtsi>
 
 / {
-    model = "Makerdiary puffin";
-    compatible = "makerdiary,puffin";
+    model = "puffin";
+    compatible = "puffin","nrf52840_qiaa";
 
     chosen {
         zephyr,code-partition = &code_partition;
