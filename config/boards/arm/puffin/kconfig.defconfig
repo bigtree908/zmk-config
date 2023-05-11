@@ -3,7 +3,7 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if BOARD_FERRIS
+if BOARD_PUFFIN
 
 config BOARD
     default "puffin"
@@ -17,4 +17,4 @@ config ZMK_USB
 config ZMK_KSCAN_MATRIX_POLLING
     default y
 
-endif # BOARD_FERRIS
+endif # BOARD_PUFFIN
