@@ -39,15 +39,15 @@
 		label = "BATTERY";
 	};
 
-#	softlock {
-#		compatible = "zmk,soft-locker-gpio";
-#
-#		input-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-#		wakeup-sources = <&kscan>;
-#		output-gpios 
-#			= <&gpio0 12 GPIO_ACTIVE_HIGH>
-#			;
-#	};
+	softlock {
+		compatible = "zmk,soft-locker-gpio";
+
+		input-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+		wakeup-sources = <&kscan>;
+		output-gpios 
+			= <&gpio0 12 GPIO_ACTIVE_HIGH>
+			;
+	};
 
 	ortho_transform: ortho_transform {
 		compatible = "zmk,matrix-transform";
