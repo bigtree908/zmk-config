@@ -10,7 +10,7 @@
 
 / {
     model = "puffin";
-    compatible = "puffin","nrf52840_qiaa";
+    compatible = "puffin","puffin";
 
 	chosen {
 		zephyr,code-partition = &code_partition;
