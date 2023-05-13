@@ -64,7 +64,7 @@
             bindings = <
                 &kp Q      	&kp W      	&kp E     	&kp R          	&kp T			
                 &hm LSHFT A &kp S 	  	&kp D 	  	&kp F			&kp G         	
-                &hm LCTRL Z &hm LALT X  &kp C     	&kp V          	&kp B         	
+                &hm LCTRL Z &hm LALT X  &kp C     	&bt BT_SEL 1         	&kp B         	
 													&kp TAB  		&kp ENTER     	
 												  
             >;
