@@ -152,13 +152,14 @@
 &spi0 {
 	compatible = "nordic,nrf-spim";
 	status = "okay"; //okay
-	sck-pin = <&gpio0 19 (GPIO_ACTIVE_HIGH)>;
+	sck-gpios = <&gpio0 19 (GPIO_ACTIVE_HIGH)>;
 	mosi-pin = <&gpio0 23 (GPIO_ACTIVE_HIGH)>;
 	miso-pin = <&gpio0 21 (GPIO_ACTIVE_HIGH)>;
 	cs-gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
 
 	trackball: trackball@0 {
 		compatible = "pixart,pmw3360";
+		status - "disabled";
 		reg = <0>;
 		label = "TRACKBALL";
 		spi-max-frequency = <2000000>;
