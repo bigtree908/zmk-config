@@ -68,7 +68,6 @@
                 &hm LCTRL Z &hm LALT X  &kp C     	&bt BT_SEL 1    &kp B
 													&kp TAB  		&kp ENTER     									  
             >;
-			trackball-bindings = <&tmv_coarse>;
         };
 
         L1_layer {
@@ -78,7 +77,6 @@
                 &trans     	&lt L2_L A	&lt L3_L B	&kp LGUI        &kp BSLH       
 													&trans          &trans       	
             >;
-			trackball-bindings = <&tmv_coarse>;
         };
 
         L2_layer {
@@ -88,7 +86,6 @@
                 &trans     &trans     	&trans      &trans          &trans       	
 													&trans          &trans       	
             >;
-			trackball-bindings = <&tmv_coarse>;
         };
 
         L3_layer {
@@ -98,7 +95,6 @@
                 &trans      &trans	    &trans      &trans         	&trans      	
 													&trans         	&trans     		
             >;
-			trackball-bindings = <&tmv_coarse>;
         };
     };
 };
