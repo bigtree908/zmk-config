@@ -152,9 +152,9 @@
 &spi0 {
 	compatible = "nordic,nrf-spim";
 	status = "okay"; //okay
-	sck-gpios = <&gpio0 19 (GPIO_ACTIVE_HIGH)>;
-	mosi-pin = <&gpio0 23 (GPIO_ACTIVE_HIGH)>;
-	miso-pin = <&gpio0 21 (GPIO_ACTIVE_HIGH)>;
+	sck-pin = <15>;
+	mosi-pin = <17>;
+	miso-pin = <19>;
 	cs-gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
 
 	trackball: trackball@0 {
