@@ -151,7 +151,7 @@
 
 &spi0 {
 	compatible = "nordic,nrf-spim";
-	status = "okay"; //okay
+	status = "disabled"; //okay
 	sck-pin = <20>;
 	mosi-pin = <18>;
 	miso-pin = <19>;
@@ -159,10 +159,11 @@
 
 	trackball: trackball@0 {
 		compatible = "pixart,pmw3360";
-		status = "okay";
+		status = "disabled";
 		reg = <0>;
 		label = "TRACKBALL";
 		spi-max-frequency = <2000000>;
+		duplex = <2048>; 
 	};
 };
 
