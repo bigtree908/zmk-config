@@ -157,17 +157,10 @@
 	miso-pin = <21>;
 	cs-gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
 
-	trackball: trackball@0 {
-		status = "okay";
+	pmw3360@0 {
 		compatible = "pixart,pmw3360";
 		reg = <0>;
-		label = "TRACKBALL";
 		spi-max-frequency = <2000000>;
-		duplex = <2048>; 
+		irq-gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 	};
-};
-
-&trackball {
-	status = "okay"; //okay
-	irq-gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 };
