@@ -1,11 +1,11 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/bigtree908
+      url-base: https://github.com/ufan
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: charybdis-with-trackball
+      revision: ptdevice-refactor
       import: app/west.yml
   self:
     path: config
