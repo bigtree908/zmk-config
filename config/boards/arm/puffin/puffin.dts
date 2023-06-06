@@ -160,6 +160,7 @@
 	trackball: pmw3360@0 {
 		compatible = "pixart,pmw3360";
 		reg = <0>;
+		label = "MOUSE";
 		spi-max-frequency = <2000000>;
 		irq-gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 	};
