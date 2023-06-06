@@ -68,7 +68,7 @@
                 &hm LCTRL Z &hm LALT X  &kp C     	&bt BT_SEL 1    &kp B
 													&kp TAB  		&kp ENTER     									  
             >;
-            trackball-bindings = <&tmv_coarse>;
+            trackball-bindings = <&tkp_fast RIGHT LEFT DOWN UP>;
         };
 
         L1_layer {
