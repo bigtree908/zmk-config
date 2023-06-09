@@ -9,6 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/rgb.h>
 
 //#define DEFAULT 0
 #define L1_L 1
@@ -65,7 +66,7 @@
             bindings = <
                 &kp Q      	&kp W      	&kp E     	&kp R          	&kp T			
                 &hm LSHFT A &kp S 	  	&kp D 	  	&kp F			&kp G         	
-                &hm LCTRL Z &hm LALT X  &kp C     	&bt BT_SEL 1    &kp B
+                &hm LCTRL Z &hm LALT X  &kp C     	&bt BT_SEL 1    &rgb_ug RGB_TOG
 													&kp TAB  		&kp ENTER     									  
             >;
             trackball-bindings = <&tmv>;
