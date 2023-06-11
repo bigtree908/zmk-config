@@ -69,7 +69,7 @@
                 &kp N		&kp M 		&kp M     	&kp M    		&lt L3_L M
 				&kp TAB  	&kp ENTER     									  
             >;
-            trackball-bindings = <&tmv_course>;
+            trackball-bindings = <&tmv_coarse>;
         };
 
         L1_layer {
