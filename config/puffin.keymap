@@ -70,6 +70,7 @@
                 &kp N		&kp M 		&kp M     	&kp M    		&lt L3_L M
 				&kp TAB  	&kp ENTER     									  
             >;
+            //trackball-bindings = <&tmv_coarse>;
         };
 
         L1_layer {
@@ -79,7 +80,7 @@
                 &trans     	&lt L2_L A	&lt L3_L B	&kp LGUI        &kp BSLH       
 													&trans          &trans       	
             >;
-			#trackball-bindings = <&tmv>;
+			//trackball-bindings = <&tmv>;
         };
 
         L2_layer {
@@ -89,7 +90,7 @@
                 &trans     &trans     	&trans      &trans          &trans       	
 													&trans          &trans       	
             >;
-			#trackball-bindings = <&tmv>;
+			//trackball-bindings = <&tmv>;
         };
 
         L3_layer {
@@ -99,7 +100,7 @@
                 &trans      &trans	    &trans      &trans         	&trans    	
 				&trans      &trans     		
             >;
-			#trackball-bindings = <&tmv>;
+			//trackball-bindings = <&tmv>;
         };
 		L4_layer {
             bindings = <
@@ -108,7 +109,7 @@
                 &trans      &trans	    &trans      &trans         	&trans    	
 				&trans      &trans     		
             >;
-			#trackball-bindings = <&tmv>;
+			//trackball-bindings = <&tmv>;
         };
     };
 };
