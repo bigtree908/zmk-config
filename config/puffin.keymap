@@ -72,7 +72,7 @@
                 &kp N		&kp M 		&kp M     	&kp M    		&lt L3_L M
 				&kp TAB  	&kp ENTER     									  
             >;
-			trackball-bindings = <&mmv>;
+			sensor-bindings = <&mmv>;
         };
 
         L1_layer {
@@ -108,7 +108,7 @@
                 &trans      &trans	    &trans      &trans         	&trans    	
 				&trans      &trans     		
             >;
-			trackball-bindings = <&mmv>;
+			
         };
     };
 };
