@@ -160,7 +160,7 @@
 	cs-gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
 
 	trackball: pmw3360@0 {
-		compatible = "pixart,pmw3360";
+		compatible = "pixart,pmw33xx";
 		reg = <0>;
 		label = "MOUSE";
 		spi-max-frequency = <2000000>;
