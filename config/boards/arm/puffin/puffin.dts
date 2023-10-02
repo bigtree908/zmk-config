@@ -157,9 +157,9 @@
 	sck-pin = <19>;
 	mosi-pin = <23>;
 	miso-pin = <21>;
-	cs-gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
+	//cs-gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
 
-	trackball: pmw3360@0 {
+	mouse: pmw3360@0 {
 		compatible = "pixart,pmw33xx";
 		reg = <0>;
 		label = "MOUSE";
