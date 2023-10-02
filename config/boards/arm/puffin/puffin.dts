@@ -21,6 +21,7 @@
 		zmk,matrix_transform = &ortho_transform;
 		zmk,battery = &vbatt;
 		zephyr,console = &cdc_acm_uart0;
+
 	};
 
 
@@ -77,7 +78,10 @@
 			;
 	};
 	
-
+	trackballs {
+		compatible = "zmk,keymap-trackballs";
+		trackballs = <&mouse>;
+	};
 };
 
 &adc {
@@ -134,5 +138,23 @@
 			label = "adafruit_boot";
 			reg = <0x000f4000 0x0000c000>;
 		};
+	};
+};
+
+&spi0 {
+	compatible = "nordic,nrf-spim";
+	status = "okay";
+	sck-pin = <19>;
+	mosi-pin = <23>;
+	miso-pin = <21>;
+	//cs-gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
+
+	mouse: pmw3360@0 {
+		compatible = "pixart,pmw33xx";
+		reg = <0>;
+		label = "MOUSE";
+		spi-max-frequency = <2000000>;
+		cs-gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
+		//irq-gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 	};
 };
