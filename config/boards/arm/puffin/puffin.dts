@@ -142,6 +142,7 @@
 };
 
 &spi0 {
+	label = "MOUSE";
 	compatible = "nordic,nrf-spim";
 	status = "okay";
 	sck-pin = <19>;
