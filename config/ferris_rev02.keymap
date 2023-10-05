@@ -87,10 +87,10 @@
 
         L3_layer {
             bindings = <
-                &trans    	&trans    	&trans      &trans         	&trans      	&trans     		&trans         	&trans      	&trans     		&trans  
-                &trans    	&trans   	&trans      &trans         	&trans      	&trans     		&trans          &trans         	&trans      	&trans       
-                &trans      &trans	    &trans      &trans         	&trans      	&trans     		&trans      	&trans     		&trans			&trans
-													&trans         	&trans     		&trans          &trans
+				&kp TAB		&kp Q      	&kp W      	&kp E     		&kp R	      	&trans     		&trans         	&trans      	&trans     		&trans  
+                &kp LSHFT	&kp A 		&kp S 	  	&kp D 	  		&kp F  			&trans     		&trans          &trans         	&trans      	&trans       
+                &kp LCTRL  	&kp LALT 	&kp X   	&kp C     		&kp V          	&trans     		&trans      	&trans     		&trans			&trans
+													&kp SPACE  		&kp ENTER     	&trans          &trans
             >;
         };
     };
