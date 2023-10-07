@@ -3,29 +3,26 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if BOARD_PUFFIN
+if BOARD_PUFFIN_RIGHT
+
+config ZMK_SPLIT_ROLE_CENTRAL
+	default y
+	
+config ZMK_KEYBOARD_NAME
+	default "Puffin"
+	
+endif 
+
+if BOARD_PUFFIN_RIGHT || BOARD_PUFFIN_LEFT
 
 config BOARD
     default "puffin"
 
 config ZMK_KEYBOARD_NAME
-    default "puffin"
-	
-config ZMK_SPLIT_ROLE_CENTRAL
-	default y
+    default "puffin"	
 	
 config SPI
 	default y
-
-if USB
-
-config USB_NRFX
-    default y
-	
-config USB_DEVICE_STACK
-	default y
-
-endif # USB
 
 config BT_CTLR
     default BT
@@ -38,5 +35,15 @@ config ZMK_USB
 
 config ZMK_SPLIT
 	default y
+	
+	if USB
 
-endif # BOARD_PUFFIN
+	config USB_NRFX
+		default y
+		
+	config USB_DEVICE_STACK
+		default y
+
+	endif # USB
+	
+endif 
