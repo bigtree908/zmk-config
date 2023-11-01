@@ -13,6 +13,6 @@
 #
 ---
 include:
-  - board: ferris_rev02
+ # - board: ferris_rev02
   - board: puffin
   
