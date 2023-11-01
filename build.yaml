@@ -14,5 +14,5 @@
 ---
 include:
  # - board: ferris_rev02
-  - board: puffin
+  - board: puffin_right
   
