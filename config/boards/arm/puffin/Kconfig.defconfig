@@ -13,12 +13,19 @@ config ZMK_KEYBOARD_NAME
 	
 endif 
 
+if BOARD_PUFFIN_LEFT
+
+config ZMK_SPLIT_ROLE_CENTRAL
+	default n
+	
+config ZMK_KEYBOARD_NAME
+	default "Puffin"
+	
+endif
+
 if BOARD_PUFFIN_RIGHT || BOARD_PUFFIN_LEFT
 
 config BOARD
-    default "puffin"
-
-config ZMK_KEYBOARD_NAME
     default "puffin"	
 	
 config SPI

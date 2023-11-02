@@ -21,7 +21,6 @@
 		zmk,matrix_transform = &ortho_transform;
 		//zmk,battery = &vbatt;
 		zephyr,console = &cdc_acm_uart0;
-
 	};
 
 
