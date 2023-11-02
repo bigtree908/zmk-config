@@ -40,7 +40,7 @@
 			;
 	};
 
-	ortho_transform: ortho_transform {
+	default_transform: ortho_transform {
 		compatible = "zmk,matrix-transform";
 		rows = <4>;
 		columns = <10>;
