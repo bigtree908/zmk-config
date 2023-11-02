@@ -1,6 +1,5 @@
 identifier: puffin
 name: puffin
-url: https://lowprokb.ca/collections/keyboards/products/corne-ish-zen
 type: mcu
 arch: arm
 toolchain:
