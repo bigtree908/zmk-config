@@ -19,5 +19,5 @@ include:
   - board: puffin_left
     shield: settings_reset
   - board: puffin_right
-   shield: settings_reset
+    shield: settings_reset
   
