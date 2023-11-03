@@ -44,9 +44,9 @@
 
 };
 
-/*&default_transform {
+&default_transform {
     col-offset = <5>;
-};*/
+};
 
 &pinctrl {
     spi0_default: spi0_default {
