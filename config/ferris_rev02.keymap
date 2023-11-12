@@ -13,6 +13,7 @@
 #define L2_L 2
 #define L3_L 3
 #define L4_L 4
+#define L5_L 5
 
 // Using layer taps on thumbs, having quick tap as well helps w/ repeating space/backspace
 &lt { quick_tap_ms = <200>; };
@@ -53,6 +54,15 @@
             flavor = "balanced";
             bindings = <&mo>, <&spen>;
         };
+		
+		combos {
+			compatible = "zmk,combos";
+			combo_esc {
+				timeout-ms = <50>;
+				key-positions = <0 31>;
+				bindings = <&to 5>;
+			};
+		};
     };
 
     keymap {
@@ -101,6 +111,15 @@
                 &kp LSHFT	&kp N4     	&kp N5      &kp N6 	  		&kp G  			&trans     		&trans          &trans         	&trans      	&trans       
                 &kp LCTRL  	&kp N1     	&kp N2      &kp N3     		&kp B          	&trans     		&trans      	&trans     		&trans			&trans
 													&kp N0  		&trans			&trans          &trans
+            >;
+        };
+		
+		L5_layer {
+            bindings = <
+				&to 0		&to 3     	&none      &none     		&kp C_VOL_UP	&none	    	&none         	&none      	&none     		&none  
+				&none		&none     	&none      &none     		&kp C_VOL_DN	&none	    	&none         	&none      	&none     		&none  
+				&none		&none     	&none      &none     		&none	      	&none	    	&none         	&none      	&none     		&none  
+													&none  			&none			&none          	&none
             >;
         };
     };

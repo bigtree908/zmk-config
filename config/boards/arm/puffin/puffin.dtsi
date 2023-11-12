@@ -23,22 +23,17 @@
 		zephyr,console = &cdc_acm_uart0;
 	};
 
-
-
 //	vbatt: vbatt {
 //		compatible = "zmk,battery-nrf-vddh";
 //		label = "BATTERY";
 //	};
 
-	softlock {
-		compatible = "zmk,soft-locker-gpio";
-
-		input-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-		wakeup-sources = <&kscan>;
-		output-gpios 
-			= <&gpio0 12 GPIO_ACTIVE_HIGH>
-			;
-	};
+//	softlock {
+//		compatible = "zmk,soft-locker-gpio";
+//		input-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+//		wakeup-sources = <&kscan>;
+//		output-gpios = <&gpio0 12 GPIO_ACTIVE_HIGH>;
+//	};
 
 	default_transform: transform_0 {
 		compatible = "zmk,matrix-transform";
