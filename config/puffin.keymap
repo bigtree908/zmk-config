@@ -59,7 +59,7 @@
             tapping-term-ms = <200>;    // <---[[moderate duration]]
             quick-tap-ms = <0>;
             flavor = "balanced";
-            bindings = <&mo>, <&spen>;
+            bindings = <&mo>, <&kp>;
         };
 		
 		combos {
