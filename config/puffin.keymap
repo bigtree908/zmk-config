@@ -52,13 +52,7 @@
             mods = <(MOD_RSFT)>; 
         };
 		
-		np1: numpad1 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NUMPAD1";
-            //#binding-cells = <0>;
-            bindings = <&kp N1>, <&kp KP_N1>;
-            mods = <(MOD_LALT)>; 
-        };
+		np1: numpad1 {compatible = "zmk,behavior-mod-morph";label = "NUMPAD1";#binding-cells = <0>;bindings = <&kp N1>, <&kp KP_N1>;mods = <(MOD_LALT)>;};
 		
         ltb: layer_tab_behave {
             compatible = "zmk,behavior-hold-tap";
