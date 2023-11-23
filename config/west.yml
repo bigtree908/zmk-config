@@ -4,7 +4,7 @@ manifest:
       url-base: https://github.com/bigtree908
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: bigtree908
       revision: mouse
       import: app/west.yml
   self:
