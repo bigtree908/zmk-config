@@ -139,7 +139,7 @@
 		
 		L5_layer {
             bindings = <
-				&to 0		&to 3		&none		&none			&kp T	&none			&none			&kp MB1			&none			&none  
+				&to 0		&to 3		&none		&none			&kp T	&none			&none			&kp M			&none			&none  
 				&bt BT(0)	&bt BT(1)	&bt BT(2)	&bt BT_CLR		&kp D	&none	    	&none       	&none      		&none     		&none  
 				&none		&none		&none		&none     		&none	      	&none	    	&none         	&none      		&none     		&none  
 													&none  			&none			&none          	&none
