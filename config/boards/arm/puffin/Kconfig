@@ -4,3 +4,5 @@
 #
 
 
+CONFIG_GPIO=y
+CONFIG_SPI=y
