@@ -5,6 +5,8 @@
  */
 
 #include "puffin.dtsi"
+#include <drivers/gpio.h>                                                                                                                                                     
+#include <drivers/spi.h>
 
 / {
 
@@ -49,7 +51,7 @@
 };
 
 &spi0 {
-	//compatible = "nordic,nrf-spim";
+	compatible = "nordic,nrf-spim";
 	cs-gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
 	status = "okay";
 	pinctrl-0 = <&spi0_default>;
