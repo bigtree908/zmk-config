@@ -3,7 +3,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/bigtree908
     - name: nrfconnect
-      url-bsse: https://github.com/nrfconnect
+      url-base: https://github.com/nrfconnect
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -11,7 +11,7 @@ manifest:
       import: app/west.yml
     - name: nrf
       remote: nrfconnect
-      revision: v1.3.0
+      revision: v2.5.99
       import: true
   self:
     path: config
