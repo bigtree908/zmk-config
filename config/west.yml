@@ -9,7 +9,7 @@ manifest:
       remote: zmkfirmware
       revision: points-move-scroll
       import: app/west.yml
-    - name: nrf
+    - name: sdk-nrf
       remote: nrfconnect
       revision: v2.5.99
       import: true
