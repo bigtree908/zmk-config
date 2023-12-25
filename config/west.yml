@@ -11,7 +11,7 @@ manifest:
       import: app/west.yml
     - name: sdk-nrf
       remote: nrfconnect
-      revision: v2.5.99
+      revision: main
       import: true
   self:
     path: config
