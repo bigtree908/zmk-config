@@ -46,7 +46,23 @@
 
 &default_transform {
     col-offset = <5>;
-};  
+};
+
+&spi0 {
+	//compatible = "nordic,nrf-spim";
+	status = "okay";
+	pinctrl-0 = <&spi0_default>;
+	pinctrl-1 = <&spi0_sleep>;
+
+	trackball: trackball@0 {
+		compatible = "pixart,pmw3360";
+		status = "okay";
+		reg = <0>;
+		label = "TRACKBALL";
+		spi-max-frequency = <2000000>;
+		//duplex = <2048>; // required by 3-wire spi
+	};
+};
 
 &pinctrl {
     spi0_default: spi0_default {
@@ -67,19 +83,5 @@
     };
 }; 
 
-&spi0 {
-	//compatible = "nordic,nrf-spim";
-	status = "okay";
-	pinctrl-0 = <&spi0_default>;
-	pinctrl-1 = <&spi0_sleep>;
 
-	trackball: trackball@0 {
-		compatible = "pixart,pmw3360";
-		status = "okay";
-		reg = <0>;
-		label = "TRACKBALL";
-		spi-max-frequency = <2000000>;
-		//duplex = <2048>; // required by 3-wire spi
-	};
-};
 
