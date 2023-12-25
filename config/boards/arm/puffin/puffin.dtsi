@@ -104,15 +104,15 @@
 
 &spi0 {
 	compatible = "nordic,nrf-spim";
-	status = "disabled";
+	status = "okay";
 
 	trackball: trackball@0 {
-		compatible = "pixart,pmw3610";
-		status = "disabled";
+		compatible = "pixart,pmw3360";
+		status = "okay";
 		reg = <0>;
 		label = "TRACKBALL";
 		spi-max-frequency = <2000000>;
-		duplex = <2048>; // required by 3-wire spi
+		//duplex = <2048>; // required by 3-wire spi
 	};
 };
 
