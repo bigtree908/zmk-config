@@ -5,8 +5,6 @@
  */
 
 #include "puffin.dtsi"
-#include <drivers/gpio.h>                                                                                                                                                     
-#include <drivers/spi.h>
 
 / {
 
