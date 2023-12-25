@@ -2,10 +2,16 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/bigtree908
+    - name: nrfconnect
+      url-bsse: https://github.com/nrfconnect
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: points-move-scroll
       import: app/west.yml
+    - name: nrf
+      remote: nrfconnect
+      revision: v1.3.0
+      import: true
   self:
     path: config
