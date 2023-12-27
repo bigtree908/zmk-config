@@ -12,6 +12,5 @@ manifest:
     - name: sdk-nrf
       remote: nrf
       revision: v2.5-branch
-      path: this/that
   self:
     path: config
