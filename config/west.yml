@@ -11,6 +11,6 @@ manifest:
       import: app/west.yml
     - name: sdk-nrf
       remote: nrf
-      revision: main
+      revision: v2.5-branch
   self:
     path: config
