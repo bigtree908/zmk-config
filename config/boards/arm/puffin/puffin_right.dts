@@ -56,7 +56,7 @@
 	pinctrl-1 = <&spi0_sleep>;
 	pinctrl-names = "default", "sleep";
 	trackball: trackball@0 {
-		compatible = "pixart,pmw3610";
+		compatible = "pixart,pmw3360";
 		status = "okay";
 		reg = <0>;
 		label = "TRACKBALL";
