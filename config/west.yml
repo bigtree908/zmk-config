@@ -2,15 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/bigtree908
-    - name: inorichi
-      url-base: https://github.com/inorichi
+    - name: nrf
+      url-base: https://github.com/nrfconnect
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: points-move-scroll
       import: app/west.yml
-    - name: zmk-pmw3610-driver
-      remote: inorichi
+    - name: sdk-nrf
+      remote: nrf
       revision: main
   self:
     path: config
