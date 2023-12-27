@@ -12,5 +12,10 @@ manifest:
     - name: sdk-nrf
       remote: nrf
       revision: v2.5-branch
+      import:
+        name-allowlist:
+          - dts
+          - drivers
+          - zephyr
   self:
     path: config
