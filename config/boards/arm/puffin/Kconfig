@@ -3,4 +3,4 @@
 # SPDX-License-Identifier: MIT
 #
 
-source "pmw3360/Kconfig"
+#source "pmw3610/Kconfig"
