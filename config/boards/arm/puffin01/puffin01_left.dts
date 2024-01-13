@@ -1,0 +1,43 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+ 
+#include "puffin01.dtsi"
+
+/ {
+
+	chosen {
+		zmk,battery = &vbatt;
+	};
+
+	vbatt: vbatt {
+		compatible = "zmk,battery-nrf-vddh";
+		label = "BATTERY";
+	};
+
+	kscan: kscan {
+		compatible = "zmk,kscan-gpio-matrix";
+		wakeup-source;
+		label = "KSCAN";
+		debounce-press-ms = <1>;
+		debounce-release-ms = <5>;
+
+		diode-direction = "col2row";
+
+		col-gpios
+			= <&gpio0 02 (GPIO_ACTIVE_HIGH)>
+			, <&gpio0 30 (GPIO_ACTIVE_HIGH)>
+			, <&gpio1 15 (GPIO_ACTIVE_HIGH)>
+			, <&gpio0 03 (GPIO_ACTIVE_HIGH)>
+			, <&gpio0 29 (GPIO_ACTIVE_HIGH)>
+			;
+		row-gpios
+			= <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			;
+	};
+};

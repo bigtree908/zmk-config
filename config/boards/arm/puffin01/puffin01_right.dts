@@ -1,0 +1,91 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include "puffin01.dtsi"
+
+/ {
+
+	chosen {
+		zmk,battery = &vbatt;
+	};
+
+	vbatt: vbatt {
+		compatible = "zmk,battery-nrf-vddh";
+		label = "BATTERY";
+	};
+
+	kscan: kscan {
+		compatible = "zmk,kscan-gpio-matrix";
+		wakeup-source;
+		label = "KSCAN";
+		debounce-press-ms = <1>;
+		debounce-release-ms = <5>;
+
+		diode-direction = "col2row";
+
+		col-gpios
+			= <&gpio0 29 (GPIO_ACTIVE_HIGH)>
+			, <&gpio0 03 (GPIO_ACTIVE_HIGH)>
+			, <&gpio1 15 (GPIO_ACTIVE_HIGH)>
+			, <&gpio0 30 (GPIO_ACTIVE_HIGH)>
+			, <&gpio0 02 (GPIO_ACTIVE_HIGH)>
+			;
+		row-gpios
+			= <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			, <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+			;
+	};
+	
+
+};
+
+&default_transform {
+    col-offset = <5>;
+};
+
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 19)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 23)>,
+                <NRF_PSEL(SPIM_MISO, 0, 21)>;
+        };
+    };
+
+    spi0_sleep: spi0_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 19)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 23)>,
+                <NRF_PSEL(SPIM_MISO, 0, 21)>;
+            low-power-enable;
+        };
+    };
+}; 
+
+&spi0 {
+	compatible = "nordic,nrf-spim";
+	cs-gpios = <&gpio0 12 GPIO_ACTIVE_LOW>;
+	status = "okay";
+	pinctrl-0 = <&spi0_default>;
+	pinctrl-1 = <&spi0_sleep>;
+	pinctrl-names = "default", "sleep";
+	trackball: trackball@0 {
+		compatible = "pixart,pmw3360";
+		status = "okay";
+		reg = <0>;
+		label = "TRACKBALL";
+		spi-max-frequency = <2000000>;
+		irq-gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+		//duplex = <2048>; // required by 3-wire spi
+	};
+};
+
+
+
+
+

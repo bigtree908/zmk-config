@@ -1,0 +1,13 @@
+file_format: "1"
+id: puffin01
+name: puffin01
+type: board
+arch: arm
+features:
+  - keys
+outputs:
+  - usb
+  - ble
+siblings:
+  - puffin01_left
+  - puffin01_right
