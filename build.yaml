@@ -20,4 +20,4 @@ include:
 #    shield: settings_reset
 #  - board: puffin_right
 #    shield: settings_reset
- #- board: puttin01_right  
+ - board: puttin01_right  
