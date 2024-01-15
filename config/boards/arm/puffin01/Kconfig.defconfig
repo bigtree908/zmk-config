@@ -31,7 +31,7 @@ config ZMK_USB
     default y
 
 config ZMK_SPLIT
-	default y
+	default n
 	
 	if USB
 
