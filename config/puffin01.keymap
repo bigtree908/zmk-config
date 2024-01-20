@@ -24,7 +24,7 @@
 
 #define BT(n) BT_SEL n
 &right_encoder { status = "okay"; };
-{
+/{
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
