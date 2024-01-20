@@ -61,13 +61,6 @@
 	status = "okay";
 };
 
-right_encoder: encoder_left {
-	compatible = "alps,ec11";
-	a-gpios = <&gpio1 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-	b-gpios = <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-	steps = <80>;
-	status = "disabled";
-};
 
 
 &usbd {

@@ -49,10 +49,15 @@
 };
 
 
-
-&right_encoder {
-    status = "okay";
+right_encoder: encoder_right {
+	compatible = "alps,ec11";
+	a-gpios = <&gpio1 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+	b-gpios = <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+	label = "RIGHT_ENCODER";
+	steps = <80>;
+	status = "ok";
 };
+
 
 sensors: sensors {
 	compatible = "zmk,keymap-sensors";
