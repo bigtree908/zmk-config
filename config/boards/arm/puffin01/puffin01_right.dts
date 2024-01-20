@@ -41,7 +41,19 @@
 			;
 	};
 	
-
+	right_encoder: encoder_right {
+		compatible = "alps,ec11";
+		a-gpios = <&gpio1 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+		b-gpios = <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        steps = <80>;
+		status = "disabled";
+	};
+	
+	sensors: sensors {
+		compatible = "zmk,keymap-sensors";
+		status = "disabled";
+		sensors = <&right_encoder>;
+	};
 
 
 };
