@@ -24,7 +24,7 @@
 
 #define BT(n) BT_SEL n
 &right_encoder { status = "okay"; };
-/ {
+{
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -94,7 +94,7 @@
                 &kp Q      	&kp W      	&kp E     	&kp R          	&kp T			&kp Y			&kp U			&kp I			&kp O			&kp P
                 &hm LSHFT A &kp S 	  	&kp D 	  	&kp F			&kp G         	&kp H           &kp J    	   	&kp K			&kp L  	  		&hm RSHFT SEMI
                 &hm LCTRL Z &hm LALT X  &kp C     	&kp V          	&kp B         	&kp N           &kp M          	&kp COMMA   	&hm RALT DOT    &hm RCTRL FSLH
-										&kp E		&kp TAB  		&kp ENTER     	&ltb L1_L SPACE	&bsd			&bt BT_CLR
+										&kp E		&kp TAB  		&kp ENTER     	&ltb L1_L SPACE	&bsd			&kp E
 												  
             >;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
