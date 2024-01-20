@@ -48,7 +48,7 @@
 		b-gpios = <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		//label = "RIGHT_ENCODER";
 		steps = <80>;
-		status = "ok";
+		status = "disabled";
 	};
 	
 	sensors: sensors {
