@@ -28,7 +28,7 @@ config ZMK_BLE
     default y
 
 config ZMK_USB
-    default y
+    default n
 
 config ZMK_SPLIT
 	default y
