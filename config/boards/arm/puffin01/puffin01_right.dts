@@ -47,10 +47,10 @@
 &default_transform {
     col-offset = <5>;
 };
-	&right_encoder {
+	&left_encoder {
     status = "okay";
 };
-    right_encoder: encoder_right {
+    left_encoder: encoder_left {
         compatible = "alps,ec11";
         a-gpios = <&gpio1 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
@@ -60,7 +60,7 @@
 
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
-        sensors = <&right_encoder>;
+        sensors = <&left_encoder>;
         triggers-per-rotation = <20>;
     };
 	
