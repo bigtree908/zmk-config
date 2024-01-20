@@ -108,6 +108,7 @@
                 &trans   	&lt L2_L X 	&trans		&kp LGUI        &kp BSLH       	&np0         	&np1     		&np2      	&np3  		&kp DOT
 										&trans		&trans          &trans       	&trans         	&trans			&trans
             >;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         L2_layer {
@@ -117,6 +118,7 @@
                 &trans     &trans     	&trans      &trans          &trans       	&tog L3_L    	&kp F9			&kp F10	        &kp F11   		&kp F12
 										&trans		&trans          &trans       	&trans      	&trans			&trans
             >;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         L3_layer {
@@ -126,6 +128,7 @@
                 &kp LCTRL  	&kp LALT 	&kp X   	&kp C     		&kp V          	&trans     		&trans      	&trans     		&trans			&trans
 										&trans		&kp SPACE  		&ltb L4_L ENTER	&trans          &trans			&trans
             >;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 		
 		L4_layer {
@@ -135,6 +138,7 @@
                 &kp LCTRL  	&kp N1     	&kp N2      &kp N3     		&kp B          	&trans     		&trans      	&trans     		&trans			&trans
 										&trans		&kp N0  		&trans			&trans          &trans			&trans
             >;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 		
 		L5_layer {
@@ -144,6 +148,7 @@
 				&none			&none     		&none      		&none     		&none	      	&none	    	&none         	&none      	&none     		&none  
 												&trans			&none  			&none			&none          	&none			&trans
             >;
+			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
