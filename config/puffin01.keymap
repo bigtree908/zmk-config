@@ -23,7 +23,7 @@
 &lt { quick_tap_ms = <200>; };
 
 #define BT(n) BT_SEL n
-&right_encoder { status = "okay"; };
+//&right_encoder { status = "okay"; };
 / {
     behaviors {
         hm: homerow_mods {
