@@ -47,8 +47,10 @@
 &default_transform {
     col-offset = <5>;
 };
-
-    right_encoder: encoder_left {
+	&right_encoder {
+    status = "okay";
+};
+    right_encoder: encoder_right {
         compatible = "alps,ec11";
         a-gpios = <&gpio1 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
@@ -62,9 +64,7 @@
         triggers-per-rotation = <20>;
     };
 	
-	&right_encoder {
-    status = "okay";
-};
+
 
 
 
