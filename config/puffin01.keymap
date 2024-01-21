@@ -25,7 +25,7 @@
 #define BT(n) BT_SEL n
 &sensors {
     status = "okay";
-    sensors = <&left_encoder &mid_encoder &right_encoder>;
+    sensors = <&right_encoder>;
 };
 &right_encoder { status = "okay"; };
 /{
